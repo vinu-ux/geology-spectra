@@ -1668,7 +1668,7 @@ body.body {
   --vtc-text-pera-1: #565858;
   --vtc-text-pera-2: #CCCCCE;
   --vtc-text-white-1: #ffffff;
-  --vtc-bg-main-1: #2293A7;
+  --vtc-bg-main-1: #40A578;
   --vtc-bg-main-2: #F69434;
   --vtc-bg-main-3: #1C74F0;
   --vtc-bg-main-4: #8D65FF;
@@ -1777,7 +1777,7 @@ body.body {
 .heading1 span.span {
   display: inline-block;
   padding: 8px 14px;
-  background-color: var(--vtc-bg-common-2);
+  background-color: #D6EFD8;
   border-radius: 111px;
   color: var(--03-home-text-colors, #001518);
   font-size: 18px;
@@ -3760,8 +3760,8 @@ body.body {
 .service1-box {
   height: 370px;
   width: 370px;
-  background-color: var(--vtc-bg-common-1);
-  border: 2px solid #D2DEE0;
+  background-color: #D6EFD8;
+  border: 2px solid #D6EFD8;
   border-radius: 50%;
   text-align: center;
   display: flex;
@@ -6949,7 +6949,7 @@ body.body {
 ::::::::::::::::::::::::::
 */
 .hero-area1 {
-  min-height: 900px;
+  min-height: 50rem;
   background: var(--vtc-bg-common-3);
   position: relative;
   z-index: 0;
