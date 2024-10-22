@@ -55,7 +55,7 @@ Desc:
         top: 0;
         left: 0;
         width: 100%;
-        padding: 17px 0;
+        padding: 5px 0;
         z-index: 999;
         background: #fff;
     }
@@ -65,7 +65,7 @@ Desc:
         top: 0;
         left: 0;
         width: 100%;
-        padding: 17px 0;
+        /* padding: 5px 0;s */
         z-index: 999;
         background: #0D131D !important;
     }
@@ -79,7 +79,7 @@ Desc:
         top: 0;
         left: 0;
         width: 100%;
-        padding: 17px 0;
+        /* padding: 5px 0; */
         z-index: 999;
         background: #fff;
     }
