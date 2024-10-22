@@ -3770,6 +3770,12 @@ body.body {
   position: relative;
   transition: all 0.4s;
 }
+@media only screen and (min-width: 340px) and (max-width: 990px) {
+.box-sty{
+  display: flex;
+  justify-content: center;
+}
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .service1-box {
     margin-top: 30px;
