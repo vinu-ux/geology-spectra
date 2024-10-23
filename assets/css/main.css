@@ -150,6 +150,14 @@ CSS LIST
     transform: scale(1.1);
   }
 }
+
+.sty-banner{
+  width: 100% !important;
+  height: 300px !important; 
+  background-size: cover !important; 
+  background-position: center !important;
+}
+
 .shape-animaiton1 {
   position: relative;
   animation-name: shape-animaiton1;
@@ -4029,7 +4037,7 @@ body.body {
   bottom: 0;
   height: 0%;
   width: 100%;
-  background-image: url(../img/service/service2-img2.png);
+  background-image: url(../img/service/service2-img2.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   z-index: -1;
@@ -4468,11 +4476,14 @@ body.body {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 0%;
-  width: 100%;
-  background-image: url(../img/service/service2-img2.png);
+  height: auto;
+  width: 100% !important;
+  height: 100% !important; 
+  background-size: cover !important; 
+  background-position: center !important;
+  filter: blur(3px);
+  background-image: url(../img/service/service2-img2.jpg);
   background-repeat: no-repeat;
-  background-position: center center;
   z-index: -1;
   border-radius: 7px;
   transition: all 0.4s;
@@ -4626,7 +4637,7 @@ body.body {
   bottom: 0;
   height: 0%;
   width: 100%;
-  background-image: url(../img/service/service2-img2.png);
+  background-image: url(../img/service/service2-img2.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   z-index: -1;
