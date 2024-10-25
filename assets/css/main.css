@@ -13553,3 +13553,14 @@ li.has-dropdown1 span {
  NAV MENU AREA CSS
 ::::::::::::::::::::::::::
 *//*# sourceMappingURL=main.css.map */
+
+.sty-img{
+  min-height: 28rem;
+}
+
+@media (max-width: 991px) {
+  .sty-img{
+    min-height: auto;
+  }
+}
+
