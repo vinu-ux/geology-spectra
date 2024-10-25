@@ -3803,14 +3803,14 @@ body.body {
 .about-value .tabs-area .nav {
   border-top: 1px solid rgba(255, 255, 255, 0.1529411765);
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin-right: 80px;
 }
 .about-value .tabs-area .nav li button {
   background: none;
-  padding: 20px;
+  padding: 14px;
   color: var(--White-colors, #FFF);
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 18px; /* 100% */
@@ -3821,9 +3821,9 @@ body.body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 2px;
+  /* height: 2px; */
   width: 100%;
-  background: #fff;
+  /* background: #fff; */
   opacity: 0;
 }
 .about-value .tabs-area .nav li button.active::after {
@@ -13558,9 +13558,26 @@ li.has-dropdown1 span {
   min-height: 28rem;
 }
 
+.lt-green-badge{
+  color: #0c6223 !important;
+  background-color: rgb(167 203 191) !important;
+  padding-top: 0.1em;
+  padding-bottom: 0.1rem;
+  margin: 5px !important;
+}
+
 @media (max-width: 991px) {
   .sty-img{
     min-height: auto;
+  }
+}
+
+.sty-tab{
+  .nav-item{
+    .nav-link.active{
+      color: white !important;
+  background-color: green !important;
+    }
   }
 }
 
