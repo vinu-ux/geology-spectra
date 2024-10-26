@@ -103,7 +103,7 @@
     </div>
   </div>
 
-  <div class="mobile-sidebar d-none d-lg-none d-md-none">
+  <div class="mobile-sidebar d-block d-lg-none d-md-none">
     <div class="logo-m">
       <a><img style="width: 150px; height: auto;" src="assets/img/logo/logo1.png" alt=""></a>
     </div>
@@ -113,16 +113,12 @@
     <div class="mobile-nav">
 
       <ul>
-        <li class="has-dropdown"><a>Home </a>
-        </li>
-        <li><a>About Us</a></li>
-        <li><a href="service.html">Service </a></li>
-        <li><a>Careers</a></li>
-        <li><a href="gallary.html">Gallery</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-
-
-
+        <li class="menu-hide"><a href="index.html">Home </a></li>
+        <li><a class="menu-hide" href="about.html">About Us</a></li>
+        <li><a class="menu-hide" href="service.html">Service </a></li>
+        <li><a class="menu-hide">Careers</a></li>
+        <li><a class="menu-hide" href="gallary.html">Gallery</a></li>
+        <li><a class="menu-hide" href="contact.html">Contact Us</a></li>
       </ul>
       <div class="mobile-button">
         <a class="theme-btn1 btn btn--ripple ripple">Get A Quote <i class="fa-solid fa-arrow-right"></i></a>
@@ -220,6 +216,12 @@
       });
     });
 
+    $(document).ready(function() {
+    setInterval(function() {
+        document.querySelector(".carousel-control-next").click();
+    }, 2000); 
+});
+
   </script>
   <!--===== HERO AREA START =======-->
 
@@ -252,8 +254,8 @@
         <div class="col-lg-7 justify-content-center">
 
           <div class="main-image">
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-interval="1000" data-ride="carousel">
+              <div class="carousel-inner" >
                
                 <div class="carousel-item active">
                   <img class="sty-img" src="assets/img/bg/mbr2.jpg" class="d-block w-100" alt="...">
@@ -1045,8 +1047,8 @@
           <div class="work-hours">
             <h6 data-aos="fade-left" data-aos-duration="700">Work Hour</h6>
             <div class="time-line" data-aos="fade-left" data-aos-duration="800">
-              <p><img src="assets/img/icons/time.png" alt=""> Sunday - Saturday</p>
-              <p><img src="assets/img/icons/time.png" alt=""> 8:00 Am - 5:00 Pm </p>
+              <p><img src="assets/img/icons/time.png" alt=""> Monday - Saturday</p>
+              <p><img src="assets/img/icons/time.png" alt=""> 9:30 Am - 5:30 Pm </p>
             </div>
             <div class="border-contact"></div>
             <div class="contact-info" data-aos="fade-left" data-aos-duration="1000">
