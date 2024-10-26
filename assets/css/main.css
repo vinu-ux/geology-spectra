@@ -3467,6 +3467,11 @@ body.body {
   }
 }
 
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+  .sty-menu{
+    max-width: 100% !important;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .about1::after {
     display: none;
@@ -3772,6 +3777,18 @@ body.body {
 }
 .about-value .heading1-w {
   padding-left: 30px;
+}
+@media only screen and (min-width: 768px) and (max-width: 875px) {
+.sty-arrow{
+  display: none !important;
+  /* font-size: 12px; */
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 865px) {
+.sty-arrow{
+  /* display: none !important; */
+  font-size: 12px;
+}
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .about-value .heading1-w {
