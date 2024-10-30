@@ -23,8 +23,10 @@
   <link rel="stylesheet" href="assets/css/main.css">
 
 
+
   <!--=====JQUERY=======-->
   <script src="assets/js/jquery-3-7-1.min.js"></script>
+  <script src="assets/js/contact.js"></script>
 </head>
 
 <body class="body1">
@@ -75,7 +77,7 @@
 
               <div class="header2-buttons">
                 <div class="button">
-                  <a class="theme-btn1 fnt-chg" href="contact.html">Get In Touch <span class="arrow sty-arrow"><i
+                  <a class="theme-btn1 fnt-chg" data-bs-toggle="modal" data-bs-target="#exampleModal">Get In Touch <span class="arrow sty-arrow"><i
                         class="fa-solid fa-arrow-right "></i></span></a>
                 </div>
               </div>
@@ -122,7 +124,7 @@
         <li><a class="menu-hide" href="contact.html">Contact Us</a></li>
       </ul>
       <div class="mobile-button">
-        <a class="theme-btn1 btn btn--ripple ripple" href="contact.html">Get In Touch <i
+        <a class="theme-btn1 btn btn--ripple ripple menu-hide" data-bs-toggle="modal" data-bs-target="#exampleModal">Get In Touch <i
             class="fa-solid fa-arrow-right"></i></a>
       </div>
 
@@ -263,7 +265,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="buttons">
-                  <a class="theme-btn1" href="contact.html">Get Started <span class="arrow"><i
+                  <a class="theme-btn1" data-bs-toggle="modal" data-bs-target="#exampleModal">Get Started <span class="arrow"><i
                         class="fa-solid fa-arrow-right"></i></span></a>
                   <div class="contact-btn">
                     <div class="icon">
@@ -397,7 +399,7 @@
 
 
               <div class="space10"></div>
-              <a class="theme-btn1" href="contact.html">Get Started <span class="arrow"><i
+              <a class="theme-btn1" data-bs-toggle="modal" data-bs-target="#exampleModal">Get Started <span class="arrow"><i
                     class="fa-solid fa-arrow-right"></i></span></a>
             </div>
           </div>
@@ -473,7 +475,7 @@
 
             <div class="space40"></div>
 
-            <a class="theme-btn1" href="contact.html">Start Your Journey <span class="arrow"><i
+            <a class="theme-btn1" data-bs-toggle="modal" data-bs-target="#exampleModal">Start Your Journey <span class="arrow"><i
                   class="fa-solid fa-arrow-right"></i></span></a>
           </div>
         </div>
@@ -516,9 +518,9 @@
         </div>
         <div class="col-lg-7">
           <div class="buttons">
-            <a class="theme-btn2" href="contact.html">Schedule An Appointment <span class="arrow"><i
+            <a class="theme-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Schedule An Appointment <span class="arrow"><i
                   class="fa-solid fa-arrow-right"></i></span></a>
-            <a class="theme-btn3" href="contact.html">Discover More <span class="arrow"><i
+            <a class="theme-btn3" href="about.html">Discover More <span class="arrow"><i
                   class="fa-solid fa-arrow-right"></i></span></a>
           </div>
         </div>
@@ -582,10 +584,10 @@
             <h5>Contact US </h5>
             <p>Subscribe Our Newsletter To Get Latest Update And News</p>
             <form action="#">
-              <input type="email" placeholder="Email Address..">
+              <input type="email" placeholder="Email Address.." id="ft-email">
               <div class="button">
-                <button class="theme-btn1">Get A Quote <span class="arrow"><i
-                      class="fa-solid fa-arrow-right"></i></span></button>
+                <a class="theme-btn1" onclick="footerEmail()">Get A Quote <span class="arrow"><i
+                      class="fa-solid fa-arrow-right"></i></span></a>
               </div>
             </form>
           </div>
@@ -612,6 +614,71 @@
     <img class="sec-shape2" src="assets/img/shapes/footer-shape2.png" alt="">
   </div>
 
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form id="emailForm">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Enter Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="contact2">
+                <div class="contact2-form p-2" data-aos="zoom-out" data-aos-duration="700">
+                  
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="single-input">
+                          <label for="">First Name*</label>
+                          <input type="text" placeholder="First Name" id="mod-first">
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="single-input">
+                          <label for="">Last Name*</label>
+                          <input type="text" placeholder="Last Name" id="mod-last">
+                        </div>
+                      </div>
+        
+                      <div class="col-lg-6">
+                        <div class="single-input">
+                          <label for="">Email Address*</label>
+                          <input type="email" placeholder="Email" id="mod-email">
+                        </div>
+                      </div>
+        
+                      <div class="col-lg-6">
+                        <div class="single-input">
+                          <label for="">Phone Number*</label>
+                          <input type="number" placeholder="Phone Number" id="mod-phon">
+                        </div>
+                      </div>
+        
+                      <div class="col-lg-12">
+                        <div class="single-input">
+                          <label for="">Message</label>
+                          <textarea rows="3" placeholder="Type your message..." id="mod-message"></textarea>
+                        </div>
+                        
+                      </div>
+        
+        
+                    </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a id="modalEmailButton" onclick="modalEmail()" data-bs-dismiss="modal" class="btn btn-primary">
+                  Submit Now <span class="arrow"><i
+                    class="fa-solid fa-angle-right"></i>
+                  </a>
+            </div>
+        </div>
+    </div>
+  </form>
+</div>
   <!--===== FOOTER AREA END =======-->
 
 

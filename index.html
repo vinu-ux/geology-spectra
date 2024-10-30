@@ -18,14 +18,17 @@
   <link rel="stylesheet" href="assets/css/slick-slider.css">
   <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
   <link rel="stylesheet" href="assets/css/aos.css">
-  <link rel="stylesheet" href="../../unpkg.com/swiper%4011.1.14/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/mobile-menu.css">
   <link rel="stylesheet" href="assets/css/main.css">
 
 
   <!--=====JQUERY=======-->
   <script src="assets/js/jquery-3-7-1.min.js"></script>
+  <script src="assets/js/contact.js"></script>
+  <script src="assets/js/carousal.js"></script>
 </head>
+
+
 
 <body class="body1">
   <div class="paginacontainer">
@@ -121,7 +124,7 @@
         <li><a class="menu-hide" href="contact.html">Contact Us</a></li>
       </ul>
       <div class="mobile-button">
-        <a class="theme-btn1 btn btn--ripple ripple">Get A Quote <i class="fa-solid fa-arrow-right"></i></a>
+        <a class="theme-btn1 btn btn--ripple ripple menu-hide" data-bs-toggle="modal" data-bs-target="#exampleModal">Get A Quote <i class="fa-solid fa-arrow-right"></i></a>
       </div>
 
       <div class="single-footer-items">
@@ -163,66 +166,7 @@
   </div>
 
   <!--=====Mobile header end=======-->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      let carousel = document.querySelector(".carousel");
-      let items = carousel.querySelectorAll(".item");
-      let dotsContainer = document.querySelector(".dots");
-
-      // Insert dots into the DOM
-      items.forEach((_, index) => {
-        let dot = document.createElement("span");
-        dot.classList.add("dot");
-        if (index === 0) dot.classList.add("active");
-        dot.dataset.index = index;
-        dotsContainer.appendChild(dot);
-      });
-
-      let dots = document.querySelectorAll(".dot");
-
-      // Function to show a specific item
-      function showItem(index) {
-        items.forEach((item, idx) => {
-          item.classList.remove("active");
-          dots[idx].classList.remove("active");
-          if (idx === index) {
-            item.classList.add("active");
-            dots[idx].classList.add("active");
-          }
-        });
-      }
-
-      // Event listeners for buttons
-      document.querySelector(".carousel-control-prev").addEventListener("click", () => {
-        let index = [...items].findIndex((item) =>
-          item.classList.contains("active")
-        );
-        showItem((index - 1 + items.length) % items.length);
-      });
-
-      document.querySelector(".carousel-control-next").addEventListener("click", () => {
-        let index = [...items].findIndex((item) =>
-          item.classList.contains("active")
-        );
-        showItem((index + 1) % items.length);
-      });
-
-      // Event listeners for dots
-      dots.forEach((dot) => {
-        dot.addEventListener("click", () => {
-          let index = parseInt(dot.dataset.index);
-          showItem(index);
-        });
-      });
-    });
-
-    $(document).ready(function() {
-    setInterval(function() {
-        document.querySelector(".carousel-control-next").click();
-    }, 2000); 
-});
-
-  </script>
+  
   <!--===== HERO AREA START =======-->
 
 
@@ -241,12 +185,15 @@
             </div>
             <div class="space30"></div>
             <div class="heading1-w">
-              <p class="text-dark" data-aos="zoom-in-up" data-aos-duration="700">As we face growing environmental challenges, Specterra’s Water Solution offers a smart way to use water more sustainably. This innovative solution helps address water scarcity by improving how we manage and conserve this vital resource. By using advanced technology, Specterra makes it easier for communities and businesses to meet their water needs without harming the environment. Choosing this solution means you can play a part in creating a better future, where everyone has access to clean water. </p>
+              <p class="text-dark" data-aos="zoom-in-up" data-aos-duration="700">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  At SPECTERRA® WATER & WASTEWATER TREATMENT SERVICES, we specialize in providing comprehensive water testing, water and wastewater treatment, and environmental compliance services to help industries, municipalities, and commercial facilities operate in line with the highest standards of water management and pollution control.
+With extensive experience in working with the Kerala State Pollution Control Board (KSPCB), we offer expert guidance and consultation to ensure compliance with local and national environmental regulations. Whether you’re looking for reliable water testing services, wastewater treatment solutions, or help with regulatory approvals, we provide custom, sustainable, and cost-effective solutions for your water and wastewater management needs.
+              </p>
             </div>
             <div class="space30"></div>
             <div class="buttons" data-aos="zoom-in-up" data-aos-duration="900">
-              <a class="theme-btn1">Get Started <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
-              <a class="theme-btn1">Discover More <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
+              <a class="theme-btn1" data-bs-toggle="modal" data-bs-target="#exampleModal">Get Started <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
+              <a href="about.html" class="theme-btn1">Discover More <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
             </div>
             <div class="space30"></div>
           </div>
@@ -311,8 +258,7 @@
       <div class="row" data-aos="zoom-in-left" data-aos-duration="800">
         <div class="col-lg-6 m-auto text-center">
           <div class="heading1">
-            <span class="span" data-aos="zoom-in-left" data-aos-duration="700"><img style="width: 30px; height:auto;"
-                src="assets/img/logo/speclogo.png" alt=""> Service</span>
+            
             <h2 class="text-anime-style-3">Who We Are</h2>
             <div class="space16"></div>
             <p data-aos="fade-left" data-aos-duration="800">Specterra is a leading service provider specializing in
@@ -331,8 +277,7 @@
               </div>
               <div class="heading1">
                 <h4><a>Our Value</a></h4>
-                <p>Our Value is deliver innovative, scientifically sound, and environmentally responsible solutions that
-                  not only meet regulatory standards</p>
+                <p>Our Value is to deliver innovative, scientifically sound, and environmentally responsible solutions that not only meet regulatory standards but also promote sustainability and resource conservation.</p>
                 <!-- <p>Join us for year-round fishing and hunting events, bring the family for our youth programs and activities,</p> -->
                 <a class="learn">Read More <span><i class="fa-solid fa-arrow-right"></i></span></a>
               </div>
@@ -348,8 +293,7 @@
               </div>
               <div class="heading1">
                 <h4><a> Our Vision</a></h4>
-                <p>To be the leading provider of sustainable water and wastewater solutions that safeguard water
-                  resources</p>
+                <p>It provider of sustainable water and wastewater solutions that safeguard water resources, promote eco-friendly practices, and enhance environmental stewardship across industries.</p>
 
                 <a class="learn">Read More <span><i class="fa-solid fa-arrow-right"></i></span></a>
               </div>
@@ -365,8 +309,8 @@
               </div>
               <div class="heading1">
                 <h4><a>Our Mission </a></h4>
-                <p>To offer reliable, efficient, and regulatory-compliant water management and wastewater treatment
-                  solutions that improve water quality, reduce pollution</p>
+                <p>To offer reliable, efficient, and regulatory-compliant water management and wastewater treatment solutions that improve water quality, reduce pollution, and protect natural ecosystems.
+                </p>
 
                 <a ref="service-details.html" class="learn">Read More <span><i
                       class="fa-solid fa-arrow-right"></i></span></a>
@@ -384,8 +328,7 @@
               <div class="heading1">
                 <h4><a>Our Services</a></h4>
 
-                <p>At Specterra, we offer a range of services to the unique needs of industries, municipalities, and
-                  commercial properties</p>
+                <p>we offer a range of services to the unique needs of industries, municipalities, and commercial properties, ensuring the highest standards of water quality, wastewater treatment services, and environmental compliance.</p>
 
                 <a class="learn">Read More <span><i class="fa-solid fa-arrow-right"></i></span></a>
               </div>
@@ -462,7 +405,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="buttons" data-aos="zoom-in-up" data-aos-duration="900">
-                  <a class="theme-btn1">Get Started <span class="arrow"><i
+                  <a class="theme-btn1" data-bs-toggle="modal" data-bs-target="#exampleModal">Get Started <span class="arrow"><i
                         class="fa-solid fa-arrow-right"></i></span></a>
                   <div class="contact-btn">
                     <div class="icon">
@@ -509,7 +452,9 @@
             <div class="space30"></div>
             <div class="space10"></div>
             <div class="space40"></div>
-            <a class="theme-btn1">Contact Now <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
+            <div class="space40"></div>
+            <div class="space28"></div>
+            <a class="theme-btn1" href="contact.html">Contact Now <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
           </div>
 
         </div>
@@ -696,15 +641,13 @@
               <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                   aria-expanded="true" aria-controls="collapseOne">
-                  What is water testing, and why is it important?
+                  What is wastewater treatment?
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Water testing involves analyzing a water sample to check for contaminants, pollutants, or any other
-                  harmful substances. It's important because it ensures the water is safe for drinking, cooking, and
-                  other uses, and it can help identify issues that may cause health concerns or damage to property.
+                  Wastewater treatment is the process of removing contaminants from wastewater to make it safe for discharge into the environment or for reuse. This involves physical, chemical, and biological processes.
                 </div>
               </div>
             </div>
@@ -712,21 +655,13 @@
               <h2 class="accordion-header" id="headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  What types of contaminants are tested in water samples?
+                  What types of wastewater do you treat?
                 </button>
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Water tests typically look for:
-
-                  Bacteria (like E. coli),
-                  Heavy metals (such as lead, mercury, arsenic),
-                  Chemicals (like nitrates, pesticides),
-                  Minerals (such as calcium, magnesium),
-                  pH levels,
-                  Salinity and hardness,
-                  Organic pollutants
+                  We treat various types of wastewater, including municipal sewage, industrial effluents, stormwater, and agricultural runoff. Each type requires specific treatment methods.
                 </div>
               </div>
             </div>
@@ -734,15 +669,13 @@
               <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  How long does it take to get results from a water test?
+                  What technologies do you use for wastewater treatment?
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Results typically take anywhere from a few days to two weeks, depending on the complexity of the test.
-                  Some basic tests can provide results quickly, while others may take longer if more detailed analysis
-                  is needed.
+                  We employ a variety of technologies such as activated sludge systems, membrane bioreactors, advanced oxidation processes, and filtration systems. Our choice of technology depends on the specific characteristics of the wastewater.
                 </div>
               </div>
             </div>
@@ -751,15 +684,13 @@
               <h2 class="accordion-header" id="headingFour">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  Can I test my water at home, or do I need a professional?
+                  Can treated water be reused?
                 </button>
               </h2>
               <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  There are home water testing kits available for basic tests, such as pH or hardness. However, for a
-                  thorough analysis of contaminants like bacteria, heavy metals, or chemicals, it’s best to use a
-                  professional testing service.
+                  Yes, treated water can be reused for various purposes, such as irrigation, industrial processes, or even potable use after advanced treatment. We focus on making our processes efficient for water reclamation.
                 </div>
               </div>
             </div>
@@ -768,15 +699,13 @@
               <h2 class="accordion-header" id="headingFive">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                  What is the difference between public and private water testing?
+                  What future trends do you see in wastewater treatment?
                 </button>
               </h2>
               <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Public water systems are regularly tested by municipalities to ensure they meet federal and state
-                  standards. Private water testing is conducted for private wells or non-regulated water sources, where
-                  the owner is responsible for testing.
+                  Future trends include increasing automation and digital monitoring, the adoption of green technologies, enhanced nutrient recovery methods, and a greater emphasis on water reuse and resource recovery.
                 </div>
               </div>
             </div>
@@ -989,44 +918,44 @@
     <div class="row justify-content-center">
       <div class="col-lg-5">
         <div class="contact2-form" data-aos="zoom-out" data-aos-duration="700">
-          <form action="#">
+          <form id="emailForm">
             <div class="row">
               <div class="col-lg-6">
                 <div class="single-input">
                   <label for="">First Name*</label>
-                  <input type="text" placeholder="First Name">
+                  <input type="text" placeholder="First Name" id="con-first">
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="single-input">
                   <label for="">Last Name*</label>
-                  <input type="text" placeholder="Last Name">
+                  <input type="text" placeholder="Last Name" id="con-last">
                 </div>
               </div>
 
               <div class="col-lg-6">
                 <div class="single-input">
                   <label for="">Email Address*</label>
-                  <input type="email" placeholder="Email">
+                  <input type="email" placeholder="Email" id="con-email">
                 </div>
               </div>
 
               <div class="col-lg-6">
                 <div class="single-input">
                   <label for="">Phone Number*</label>
-                  <input type="number" placeholder="Phone Number">
+                  <input type="number" placeholder="Phone Number" id="con-phon">
                 </div>
               </div>
 
               <div class="col-lg-12">
                 <div class="single-input">
                   <label for="">Message</label>
-                  <textarea rows="5" placeholder="Type your message..."></textarea>
+                  <textarea rows="5" placeholder="Type your message..." id="con-message"></textarea>
                 </div>
                 <div class="space10"></div>
                 <div class="">
-                  <button class="theme-btn4" href="about.html">Submit Now <span class="arrow"><i
-                        class="fa-solid fa-angle-right"></i></span></button>
+                  <a id="sendEmailButton" onclick="sendEmail()"  class="theme-btn4" >Submit Now <span class="arrow"><i
+                        class="fa-solid fa-angle-right"></i></span></a>
                 </div>
               </div>
 
@@ -1095,9 +1024,9 @@
         </div>
         <div class="col-lg-7">
           <div class="buttons">
-            <a class="theme-btn2">Schedule An Appointment <span class="arrow"><i
+            <a class="theme-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Schedule An Appointment <span class="arrow"><i
                   class="fa-solid fa-arrow-right"></i></span></a>
-            <a class="theme-btn3">Discover More <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
+            <a class="theme-btn3" href="about.html">Discover More <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
           </div>
         </div>
       </div>
@@ -1160,10 +1089,10 @@
             <h5>Contact US </h5>
             <p>Subscribe Our Newsletter To Get Latest Update And News</p>
             <form action="#">
-              <input type="email" placeholder="Email Address..">
+              <input type="email" placeholder="Email Address.." id="ft-email">
               <div class="button">
-                <button class="theme-btn1">Get A Quote <span class="arrow"><i
-                      class="fa-solid fa-arrow-right"></i></span></button>
+                <a class="theme-btn1" onclick="footerEmail()" >Get A Quote <span class="arrow"><i
+                      class="fa-solid fa-arrow-right"></i></span></a>
               </div>
             </form>
           </div>
@@ -1191,7 +1120,7 @@
   </div>
 
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <form action="#">
+    <form id="emailForm">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -1200,40 +1129,40 @@
             </div>
             <div class="modal-body">
               <div class="contact2">
-                <div class="contact2-form" data-aos="zoom-out" data-aos-duration="700">
+                <div class="contact2-form p-2" data-aos="zoom-out" data-aos-duration="700">
                   
                     <div class="row">
                       <div class="col-lg-6">
                         <div class="single-input">
                           <label for="">First Name*</label>
-                          <input type="text" placeholder="First Name">
+                          <input type="text" placeholder="First Name" id="mod-first">
                         </div>
                       </div>
                       <div class="col-lg-6">
                         <div class="single-input">
                           <label for="">Last Name*</label>
-                          <input type="text" placeholder="Last Name">
+                          <input type="text" placeholder="Last Name" id="mod-last">
                         </div>
                       </div>
         
                       <div class="col-lg-6">
                         <div class="single-input">
                           <label for="">Email Address*</label>
-                          <input type="email" placeholder="Email">
+                          <input type="email" placeholder="Email" id="mod-email">
                         </div>
                       </div>
         
                       <div class="col-lg-6">
                         <div class="single-input">
                           <label for="">Phone Number*</label>
-                          <input type="number" placeholder="Phone Number">
+                          <input type="number" placeholder="Phone Number" id="mod-phon">
                         </div>
                       </div>
         
                       <div class="col-lg-12">
                         <div class="single-input">
                           <label for="">Message</label>
-                          <textarea rows="5" placeholder="Type your message..."></textarea>
+                          <textarea rows="3" placeholder="Type your message..." id="mod-message"></textarea>
                         </div>
                         
                       </div>
@@ -1246,10 +1175,10 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">
+                <a id="modalEmailButton" onclick="modalEmail()" data-bs-dismiss="modal" class="btn btn-primary">
                   Submit Now <span class="arrow"><i
                     class="fa-solid fa-angle-right"></i>
-                </button>
+                  </a>
             </div>
         </div>
     </div>

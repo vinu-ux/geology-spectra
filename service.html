@@ -24,6 +24,7 @@
 
      <!--=====JQUERY=======-->
      <script src="assets/js/jquery-3-7-1.min.js"></script>
+     <script src="assets/js/contact.js"></script>
 </head>
 <body class="body1">
 <div class="paginacontainer"> 
@@ -72,7 +73,7 @@
 
                <div class="header2-buttons">
                     <div class="button">
-                      <a class="theme-btn1 sty-arrow" href="contact.html">Get In Touch <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
+                      <a class="theme-btn1 sty-arrow" data-bs-toggle="modal" data-bs-target="#exampleModal">Get In Touch <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                </div>
 
@@ -119,7 +120,7 @@
               </ul>
             
               <div class="mobile-button">
-                <a class="theme-btn1 btn btn--ripple ripple " href="contact.html">Get A Quote <i class="fa-solid fa-arrow-right"></i></a>
+                <a class="theme-btn1 btn btn--ripple ripple menu-hide" data-bs-toggle="modal" data-bs-target="#exampleModal">Get A Quote <i class="fa-solid fa-arrow-right"></i></a>
               </div>
     
               <div class="single-footer-items">
@@ -229,10 +230,10 @@
                                                   <img src="assets/img/logo/kerala.png" alt="">
                                                 </div>
                                                 <div class="heading2">
-                                                  <h4><a href="#">Kerala State Pollution Control Board Consultation</a></h4>
+                                                  <h4><a href="kerala-water.html">Kerala State Pollution Control Board Consultation</a></h4>
                                                   <div class="space16"></div>
                                                   <p>Navigating the complexities of Kerala State Pollution Control Board (KSPCB) regulations can be challenging.</p>
-                                                  <a class="button position-absolute bottom-0 mb-4" >Read More <span class="arrow"><i class="fa-solid fa-angle-right"></i></span></a>
+                                                  <a class="button position-absolute bottom-0 mb-4" href="kerala-water.html">Read More <span class="arrow"><i class="fa-solid fa-angle-right"></i></span></a>
                                                 </div>
                                               </div>
                                             </div>
@@ -243,10 +244,10 @@
                                                   <img src="assets/img/icons/about-service-icon3.png" alt="">
                                                 </div>
                                                 <div class="heading2">
-                                                  <h4><a href="#">Wastewater Treatment Solutions</a></h4>
+                                                  <h4><a href="waste-water.html">Wastewater Treatment Solutions</a></h4>
                                                   <div class="space16"></div>
                                                  <p>This technology is often used in industries where wastewater contains high concentrations of metals or other difficult-to-treat pollutants</p>
-                                                 <a class="button position-absolute bottom-0 mb-4" >Read More <span class="arrow"><i class="fa-solid fa-angle-right"></i></span></a>
+                                                 <a class="button position-absolute bottom-0 mb-4" href="waste-water.html" >Read More <span class="arrow"><i class="fa-solid fa-angle-right"></i></span></a>
                                                 </div>
                                               </div>
                                             </div>
@@ -257,9 +258,9 @@
                                                     <img src="assets/img/icons/fluvant.png" alt="">
                                                   </div>
                                                   <div class="heading2">
-                                                    <h4><a href="#">Fluent treatment plant</a></h4>
+                                                    <h4><a href="#">Effluent Treatment Plant</a></h4>
                                                     <div class="space16"></div>
-                                                    <p>Ensure the water your family drinks are pure and safe with our range of home water purification systems</p>
+                                                    <p>Effluent Treatment Plants (ETPs) play a crucial role in wastewater management, designed specifically to treat industrial effluents to prevent environmental contamination and to comply with regulatory standards. </p>
                                                     <a class="button position-absolute bottom-0 mb-4" >Read More <span class="arrow"><i class="fa-solid fa-angle-right"></i></span></a>
                                                   </div>
                                                 </div>
@@ -271,10 +272,10 @@
                                                     <img src="assets/img/icons/seawage.png" alt="">
                                                   </div>
                                                   <div class="heading2">
-                                                    <h4><a href="#">Sewage treatment plant</a></h4>
+                                                    <h4><a href="seawage-treatment.html">Sewage treatment plant</a></h4>
                                                     <div class="space16"></div>
                                                     <p>Ensure the water your family drinks are pure and safe with our range of home water purification systems</p>
-                                                    <a class="button position-absolute bottom-0 mb-4" >Read More <span class="arrow"><i class="fa-solid fa-angle-right"></i></span></a>
+                                                    <a href="seawage-treatment.html" class="button position-absolute bottom-0 mb-4" >Read More <span class="arrow"><i class="fa-solid fa-angle-right"></i></span></a>
                                                   </div>
                                                 </div>
                                               </div>
@@ -285,10 +286,10 @@
                                                     <img src="assets/img/icons/about-service-icon4.png" alt="">
                                                   </div>
                                                   <div class="heading2">
-                                                    <h4><a href="#">Residential Water Purification</a></h4>
+                                                    <h4><a href="residental.html">Residential Water Purification</a></h4>
                                                     <div class="space16"></div>
                                                     <p>Ensure the water your family drinks are pure and safe with our range of home water purification systems</p>
-                                                    <a class="button position-absolute bottom-0 mb-4" >Read More <span class="arrow"><i class="fa-solid fa-angle-right"></i></span></a>
+                                                    <a href="residental.html" class="button position-absolute bottom-0 mb-4" >Read More <span class="arrow"><i class="fa-solid fa-angle-right"></i></span></a>
                                                   </div>
                                                 </div>
                                               </div>
@@ -299,10 +300,10 @@
                                                     <img src="assets/img/icons/about-service-icon5.png" alt="">
                                                   </div>
                                                   <div class="heading2">
-                                                    <h4><a href="#">Industrial Waste Water Solutions</a></h4>
+                                                    <h4><a href="industrial.html">Industrial Waste Water Solutions</a></h4>
                                                     <div class="space16"></div>
                                                     <p>From office buildings to large manufacturing plants, our commercial and industrial water solutions ensure safe and efficient water use. </p>
-                                                    <a class="button position-absolute bottom-0 mb-4" >Read More <span class="arrow"><i class="fa-solid fa-angle-right"></i></span></a>
+                                                    <a href="industrial.html" class="button position-absolute bottom-0 mb-4" >Read More <span class="arrow"><i class="fa-solid fa-angle-right"></i></span></a>
                                                   </div>
                                                 </div>
                                               </div>
@@ -360,8 +361,8 @@
                   </div>
                   <div class="col-lg-7">
                     <div class="buttons">
-                      <a class="theme-btn2" href="contact.html">Schedule An Appointment <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
-                      <a class="theme-btn3" href="contact.html">Discover More <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
+                      <a class="theme-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Schedule An Appointment <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
+                      <a class="theme-btn3" href="about.html">Discover More <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
                     </div>
                   </div>
                 </div>
@@ -421,9 +422,9 @@
                           <h5>Contact US </h5>
                           <p>Subscribe Our Newsletter To Get Latest Update And News</p>
                           <form action="#">
-                            <input type="email" placeholder="Email Address..">
+                            <input type="email" placeholder="Email Address.." id="ft-email">
                             <div class="button">
-                              <button class="theme-btn1">Get A Quote <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></button>
+                              <a onclick="footerEmail()" class="theme-btn1">Get A Quote <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
                             </div>
                           </form>
                         </div>
@@ -449,6 +450,72 @@
                   <img class="sec-shape1" src="assets/img/shapes/footer-shape1.png" alt="">
                   <img class="sec-shape2" src="assets/img/shapes/footer-shape2.png" alt="">
                 </div>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <form id="emailForm">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Enter Details</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="contact2">
+                              <div class="contact2-form p-2" data-aos="zoom-out" data-aos-duration="700">
+                                
+                                  <div class="row">
+                                    <div class="col-lg-6">
+                                      <div class="single-input">
+                                        <label for="">First Name*</label>
+                                        <input type="text" placeholder="First Name" id="mod-first">
+                                      </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                      <div class="single-input">
+                                        <label for="">Last Name*</label>
+                                        <input type="text" placeholder="Last Name" id="mod-last">
+                                      </div>
+                                    </div>
+                      
+                                    <div class="col-lg-6">
+                                      <div class="single-input">
+                                        <label for="">Email Address*</label>
+                                        <input type="email" placeholder="Email" id="mod-email">
+                                      </div>
+                                    </div>
+                      
+                                    <div class="col-lg-6">
+                                      <div class="single-input">
+                                        <label for="">Phone Number*</label>
+                                        <input type="number" placeholder="Phone Number" id="mod-phon">
+                                      </div>
+                                    </div>
+                      
+                                    <div class="col-lg-12">
+                                      <div class="single-input">
+                                        <label for="">Message</label>
+                                        <textarea rows="3" placeholder="Type your message..." id="mod-message"></textarea>
+                                      </div>
+                                      
+                                    </div>
+                      
+                      
+                                  </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              <a id="modalEmailButton" onclick="modalEmail()" data-bs-dismiss="modal" class="btn btn-primary">
+                                Submit Now <span class="arrow"><i
+                                  class="fa-solid fa-angle-right"></i>
+                                </a>
+                          </div>
+                      </div>
+                  </div>
+                </form>
+              </div>
         
                 <!--===== FOOTER AREA END =======-->
 
