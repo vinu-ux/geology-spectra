@@ -8185,6 +8185,10 @@ body.body {
   position: sticky;
   top: 100px;
 }
+.pricing .pricing-box-area .single-box:nth-child(6) {
+  position: sticky;
+  top: 100px;
+}
 .pricing .pricing-box-area .single-box .icon {
   background-color: rgba(34, 147, 167, 0.1215686275);
   height: 60px;
