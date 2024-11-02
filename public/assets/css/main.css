@@ -3784,6 +3784,11 @@ body.body {
   /* font-size: 12px; */
 }
 }
+@media only screen and (min-width: 768px) and (max-width: 990px) {
+.service1-box{
+ min-height: 24rem !important;
+}
+}
 @media only screen and (min-width: 768px) and (max-width: 865px) {
 .sty-arrow{
   /* display: none !important; */
@@ -8172,6 +8177,18 @@ body.body {
   position: sticky;
   top: 100px;
 }
+.pricing .pricing-box-area .single-box:nth-child(4) {
+  position: sticky;
+  top: 100px;
+}
+.pricing .pricing-box-area .single-box:nth-child(5) {
+  position: sticky;
+  top: 100px;
+}
+.pricing .pricing-box-area .single-box:nth-child(6) {
+  position: sticky;
+  top: 100px;
+}
 .pricing .pricing-box-area .single-box .icon {
   background-color: rgba(34, 147, 167, 0.1215686275);
   height: 60px;
@@ -8202,6 +8219,11 @@ body.body {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .pricing .pricing-box-area .pricing-list {
     margin-top: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .footer-logo-area {
+    text-align: center;
   }
 }
 @media (max-width: 767px) {
