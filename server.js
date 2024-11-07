@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path'); // Import path module
-
+const dontenv = require('dotenv').config()
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -24,8 +24,8 @@ app.post('/send-email', (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'Gmail', // Change this to the appropriate email service
         auth: {
-            user: 'teamshop2host@gmail.com', // Your email
-            pass: 'cokjyyodvsobwajc', // Your email password or app password
+            user: process.env.EMAIL, // Your email
+            pass: process.env.PASS, // Your email password or app password
         }
     });
 
@@ -46,45 +46,18 @@ app.post('/send-email', (req, res) => {
     });
 });
 
-// // Start server
-// app.listen(PORT, () => {
-//     console.log(Server is running on http://localhost:${PORT});
-// });
+app.get('/:page', (req, res) => {
+    const page = req.params.page;
+    const filePath = path.join(__dirname, 'public', `${page}.html`);
+    res.sendFile(filePath, (err) => {
+        if (err) {
+            res.status(404).send('Page not found');
+        }
+    });
+});
 
-// // Nodemailer configuration
-// const transporter = nodemailer.createTransport({
-//   service: 'gmail', // or your email service
-//   auth: {
-//     user: 'teamshop2host@gmail.com',
-//     pass: 'cokjyyodvsobwajc',
-//   },
-// });
+app.use(express.static(path.join(__dirname, 'public')));
 
-// // Email sending route
-// app.post('/send-email', (req, res) => {
-//   const { to, subject, text } = req.body;
-
-//   const mailOptions = {
-//     from: 'teamshop2host@gmail.com',
-//     to: 'teamshop2host@gmail.com',
-//     subject: 'teamshop2host@gmail.com',
-//     text: req.body,
-//   };
-
-//   transporter.sendMail(mailOptions, (error, info) => {
-//     if (error) {
-//       return res.status(500).send(error.toString());
-//     }
-//     res.status(200).send('Email sent: ' + info.response);
-//   });
-// });
-
-// // Serve the index.html file when accessing the root
-// app.get('/', (req, res) => {
-//   res.sendFile(__dirname + '/public/index.html');
-// });
-
-// Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
