@@ -13,6 +13,7 @@ Location:
 
 CSS LIST
 
+
 =<::::::::::::::::::::::::::=>
   HEADER AREA CSS
 =<::::::::::::::::::::::::::=>
@@ -12224,6 +12225,10 @@ body.body {
   position: relative;
 }
 
+.header-area1.sticky{
+
+}
+
 .tp-submenu {
   visibility: hidden;
   opacity: 0;
@@ -13625,5 +13630,41 @@ li.has-dropdown1 span {
             background-position: center;
             height: 25rem;
             width: 25rem;
+}
+
+
+.main-header .info-btn {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  padding: 8px 0;
+  padding-left: 60px;
+  color: var(--theme-color-2);
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+  line-height: 20px;
+  margin-left: 30px;
+}
+
+.main-header .info-btn img {
+  color: #fff;
+  border-radius: 50%;
+  font-size: 16px;
+  left: 0;
+  line-height: 50px;
+  margin-top: -22px;
+  position: absolute;
+  text-align: left;
+  top: 50%;
+}
+.main-header .info-btn div{
+  text-align: right;
+}
+
+.header-area1.sticky{
+  .main-header .info-btn {
+    border:1px solid greenyellow;
+    }
 }
 
