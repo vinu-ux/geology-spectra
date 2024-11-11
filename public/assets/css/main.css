@@ -11340,10 +11340,9 @@ body.body {
   text-decoration: underline;
 }
 .footer1 .copyright-area a:nth-child(1) {
-  padding-right: 20px;
+  padding-right: 0px;
 }
 .footer1 .copyright-area a:nth-child(1)::after {
-  content: "";
   position: absolute;
   right: 8px;
   top: 5px;
